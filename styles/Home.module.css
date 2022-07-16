@@ -1,15 +1,28 @@
 .container {
-  padding: 0 2rem;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 1rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.main span {
+  background-color: red;
+  color: white;
+  /* padding-right:15px;
+  padding-left: 15px; */
+  padding: 5px 15px 10px 15px;
+  border-radius: 10px;
 }
 
 .footer {
@@ -42,7 +55,8 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2.25rem;
+  color: grey;
 }
 
 .title,
@@ -66,7 +80,7 @@
 }
 
 .grid {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -75,31 +89,39 @@
 
 .card {
   margin: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.card a:hover,
+.card a:focus,
+.card a:active {
+  /* color: #0070f3;
+  border-color: #0070f3; */
+  color: red;
+  border-color: red;
 }
 
+.card .info{
+  margin-left: 1rem;
+}
 .card h2 {
   margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -108,9 +130,35 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+.search {
+  width: 650px;
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.search input{
+  line-height: 1.5;
+  font-size: 1.5rem;
+  outline: none;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+.search button {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: white;
+  background-color: red;
+  border: 0;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+
+/* @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
-}
+} */
